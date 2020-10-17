@@ -5,6 +5,15 @@
 
 <form asp-action="Math" method="post">
     <div>
-        <
+        <input name="a" asp-for="@Model.A" />
     </div>
+    <div>
+        <input name="b" asp-for="@Model.B" />
+    </div>
+    <input type="submit" value="Submit"/>
 </form>
+
+<p>Add = @TempData["Add"]</p>
+<p>Substract = @TempData["Substract"]</p>
+<p>Multiply = @TempData["Multiply"]</p>
+<p>Division = @TempData["Division"]</p>

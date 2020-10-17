@@ -37,12 +37,18 @@ namespace Midterm.Controllers
         }
 
         [HttpPost]
-        public IActionResult Calculate(Models.Math1 math)
+        public IActionResult Math(Models.Math1 math)
         {
-            math.Answer = 0;
+            math.Add = math.A + math.B;
+            math.Substract = math.A - math.B;
+            math.Multiply = math.A * math.B;
+            math.Division = math.A / math.B;
             _context.Maths.Add(math);
             _context.SaveChanges();
-            TempData["Result"] = math.Answer;
+            TempData["Add"] = math.Add.ToString();
+            TempData["Substract"] = math.Substract.ToString();
+            TempData["Multiply"] = math.Multiply.ToString();
+            TempData["Division"] = math.Division.ToString();
             return RedirectToAction("Index");
         }
     }

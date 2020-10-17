@@ -14,6 +14,9 @@ namespace Midterm.Models
         [Required]
         public int B { get; set; }
         [Required]
-        public int Answer { get; set; } 
+        public int Add { get; set; }
+        public int Substract { get; set; }
+        public double Multiply { get; set; }
+        public double Division { get; set; }
     }
 }
