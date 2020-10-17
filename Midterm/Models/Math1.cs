@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Midterm.Models
 {
-    public class Math
+    public class Math1
     {
         public int Id { get; set; }
         [Required]

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +26,7 @@ namespace Midterm
         {
             services.AddControllersWithViews();
             services.AddMvc();
-            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("Math"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("Maths"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

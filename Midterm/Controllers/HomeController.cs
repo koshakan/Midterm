@@ -37,7 +37,7 @@ namespace Midterm.Controllers
         }
 
         [HttpPost]
-        public IActionResult Calculate(Models.Math math)
+        public IActionResult Calculate(Models.Math1 math)
         {
             math.Answer = 0;
             _context.Maths.Add(math);
