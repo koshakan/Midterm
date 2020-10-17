@@ -10,9 +10,9 @@ namespace Midterm.Models
     {
         public int Id { get; set; }
         [Required]
-        public int X { get; set; }
+        public int A { get; set; }
         [Required]
-        public int Y { get; set; }
+        public int B { get; set; }
         [Required]
         public int Answer { get; set; } 
     }

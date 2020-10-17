@@ -42,7 +42,7 @@ namespace Midterm.Controllers
             math.Answer = 0;
             _context.Solutions.Add(math);
             _context.SaveChanges();
-            TempData["Result"] = solution.Answer;
+            TempData["Result"] = math.Answer;
             return RedirectToAction("Index");
         }
     }
