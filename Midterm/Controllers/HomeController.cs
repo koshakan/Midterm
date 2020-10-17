@@ -37,10 +37,10 @@ namespace Midterm.Controllers
         }
 
         [HttpPost]
-        public IActionResult Calculate(Math math)
+        public IActionResult Calculate(Models.Math math)
         {
             math.Answer = 0;
-            _context.Solutions.Add(math);
+            _context.Maths.Add(math);
             _context.SaveChanges();
             TempData["Result"] = math.Answer;
             return RedirectToAction("Index");

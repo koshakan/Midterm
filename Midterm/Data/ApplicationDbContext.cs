@@ -7,7 +7,8 @@ namespace Midterm.Data
     {
         public DbSet<Math> Maths { get; set; }
 
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public ApplicationDbContext(DbContextOptions options) 
+            : base(options)
         {
 
         }
